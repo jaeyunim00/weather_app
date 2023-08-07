@@ -71,6 +71,7 @@ export default function App() {
                 {parseFloat(day.temp.day).toFixed(1)}
               </Text>
               <Text style={styles.desc}>{day.weather[0].main}</Text>
+              <Text style={styles.tinyText}>{day.weather[0].description}</Text>
             </View>
           ))
         )}
@@ -86,7 +87,6 @@ const styles = StyleSheet.create({
   },
   city: {
     flex: 1.2,
-    backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
   day: {
     width: SCREEN_WIDTH,
     alignItems: "center",
-    backgroundColor: "teal",
   },
   temp: {
     marginTop: 50,
@@ -107,5 +106,8 @@ const styles = StyleSheet.create({
   desc: {
     marginTop: -30,
     fontSize: 60,
+  },
+  tinyText: {
+    fontSize: 20,
   },
 });
